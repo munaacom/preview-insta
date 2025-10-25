@@ -1,0 +1,19 @@
+{
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors https://www.notion.so https://notion.so 'self';"
+        }
+      ]
+    }
+  ]
+}
